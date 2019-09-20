@@ -14,6 +14,7 @@ class ActivityStart : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.supportActionBar?.hide() //hide the title bar
         setContentView(R.layout.activity_start)
 
         mLogin = find(R.id.activity_login_btn_login)

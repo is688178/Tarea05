@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/chocolate_style"
     tools:context=".activities.ActivityStart">
-
-    <!-- TODO Add Background Image -->
 
     <com.google.android.material.textview.MaterialTextView
         android:layout_width="0dp"
@@ -16,6 +15,8 @@
         app:layout_constraintStart_toStartOf="@+id/activity_login_btn_login"
         app:layout_constraintEnd_toEndOf="@+id/activity_login_btn_register"
         android:textSize="30sp"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
