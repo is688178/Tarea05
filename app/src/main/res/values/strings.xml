@@ -9,4 +9,7 @@
     <string name="finish">Finish</string>
     <string name="start_welcome">Prepárate los mejores platillos</string>
     <string name="register">Register</string>
+    <string name="recipes">Recipes</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
 </resources>
