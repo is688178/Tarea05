@@ -3,13 +3,9 @@ package iteso.mx.tarea05.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.core.view.get
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import iteso.mx.tarea05.R
-import iteso.mx.tarea05.fragments.mainBottom.FragmentHome
-import iteso.mx.tarea05.fragments.mainBottom.FragmentProfile
-import iteso.mx.tarea05.fragments.mainBottom.FragmentRecipes
-import org.jetbrains.anko.support.v4.viewPager
+import iteso.mx.tarea05.fragments.mainBottom.*
 
 class ActivityMain : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 

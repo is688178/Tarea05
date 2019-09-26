@@ -1,14 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ViewAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_main_switcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ActivityMain">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/fragment_home_tv_title"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragment_main_home_btn_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/refresh" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center" />
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.MaterialComponents.CardView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Home"
-        android:textSize="30sp" />
+        android:minHeight="200dp"
+        app:cardBackgroundColor="@color/colorBackgroundCard"
+        app:cardPreventCornerOverlap="true">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fragment_main_home_imv_favfood"
+                android:layout_width="200sp"
+                android:layout_height="100sp"
+                android:src="@drawable/enchiladas"
+                app:layout_constraintBottom_toTopOf="@id/fragment_main_home_tv_some_ing"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fragment_main_home_tv_some_ing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/algunos_ingredientes"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintTop_toBottomOf="@id/fragment_main_home_imv_favfood"
+                app:layout_constraintBottom_toTopOf="@id/fragment_main_home_tv_ing_list"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fragment_main_home_tv_ing_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/recipe_ingredients_enchilada"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintTop_toBottomOf="@id/fragment_main_home_tv_some_ing"
+                app:layout_constraintBottom_toTopOf="@id/fragment_main_home_btn_favorites"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fragment_main_home_tv_recipe_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/recipe_date"
+                android:textColor="@color/colorWhite"
+                app:layout_constraintTop_toTopOf="@id/fragment_main_home_tv_some_ing"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_main_home_tv_some_ing"
+                app:layout_constraintStart_toEndOf="@id/fragment_main_home_tv_some_ing"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fragment_main_home_btn_favorites"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="@string/agregar_a_favoritos"
+                app:layout_constraintTop_toBottomOf="@id/fragment_main_home_tv_ing_list"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/no_recipe">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:text="@string/no_hay_recetas"
+            android:textColor="@color/colorWhite"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ViewAnimator>

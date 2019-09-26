@@ -17,12 +17,6 @@ class ActivityTutorial : AppCompatActivity(){
                 FragmentFirstTutorial()
             )
             .commit()
-
-        /* TODO Create three fragments for the tutorial and place them in activity_tutorial_fl_content
-        *   First Fragment has a background image and a next button
-        *   Second Fragment has a background image a next and previous button
-        *   Third Fragment has a background image a finish and a previous button
-        *  */
     }
 
 }
