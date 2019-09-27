@@ -14,7 +14,7 @@ import org.jetbrains.anko.find
 
 class FragmentRecipes : Fragment() {
     private lateinit var mAdapter: AdapterRecipe
-    private lateinit var mRecycler: RecyclerView
+    //private lateinit var mRecycler: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,9 +23,10 @@ class FragmentRecipes : Fragment() {
         val view = inflater.inflate(R.layout.fragment_main_recipes, container, false)
         /* TODO fetch data from parse and replace it inside AdapterRecipe*/
         mAdapter = AdapterRecipe(arrayListOf())
-        mRecycler = view.find(R.id.fragment_recipes_rv_recipes)
-        mRecycler.adapter = mAdapter
-        mRecycler.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
+
+//        mRecycler = view.find(R.id.fragment_recipes_rv_recipes)
+//        mRecycler.adapter = mAdapter
+//        mRecycler.layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
         return view
     }
 }

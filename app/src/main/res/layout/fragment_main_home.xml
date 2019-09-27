@@ -51,10 +51,9 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/algunos_ingredientes"
                 android:textColor="@color/colorWhite"
-                app:layout_constraintTop_toBottomOf="@id/fragment_main_home_imv_favfood"
                 app:layout_constraintBottom_toTopOf="@id/fragment_main_home_tv_ing_list"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@id/fragment_main_home_imv_favfood" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/fragment_main_home_tv_ing_list"
@@ -63,10 +62,10 @@
                 android:layout_marginTop="10dp"
                 android:text="@string/recipe_ingredients_enchilada"
                 android:textColor="@color/colorWhite"
-                app:layout_constraintTop_toBottomOf="@id/fragment_main_home_tv_some_ing"
                 app:layout_constraintBottom_toTopOf="@id/fragment_main_home_btn_favorites"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/fragment_main_home_tv_some_ing" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/fragment_main_home_tv_recipe_date"
@@ -75,23 +74,23 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/recipe_date"
                 android:textColor="@color/colorWhite"
-                app:layout_constraintTop_toTopOf="@id/fragment_main_home_tv_some_ing"
                 app:layout_constraintBottom_toBottomOf="@id/fragment_main_home_tv_some_ing"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/fragment_main_home_tv_some_ing"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toTopOf="@id/fragment_main_home_tv_some_ing" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/fragment_main_home_btn_favorites"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
                 android:text="@string/agregar_a_favoritos"
-                app:layout_constraintTop_toBottomOf="@id/fragment_main_home_tv_ing_list"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/fragment_main_home_tv_ing_list" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -117,6 +116,5 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </ViewAnimator>

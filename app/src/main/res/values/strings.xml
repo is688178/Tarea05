@@ -18,4 +18,10 @@
     <string name="recipe_ingredients_enchilada">3 tazas de papas, peladas y cortadas en cubos\n3 tazas de zanahorias, peladas y cortadas en cubos\n1 lata (28 oz) de salsa roja para enchiladas\n2 cucharadas de aceite vegetal\n1 cebolla mediana, finamente picada\nSal, al gusto \n16–20 tortillas de maíz\n3 tazas de queso fresco, desmoronado \n2 tazas de lechuga, finamente picada \nRajas de jalapeño en escabeche, al gusto\nCrema mexicana o crema agria, al gusto</string>
     <string name="recipe_date">30/08/1994</string>
     <string name="agregar_a_favoritos">Agregar a Favoritos</string>
+    <string name="favorites">Favorites</string>
+    <string name="testing">Testing</string>
+    <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="email">is688178@gmail.com</string>
+    <string name="enchiladas">Enchiladas</string>
+    <string name="favorite_user_food_image">Favorite user food image</string>
 </resources>
