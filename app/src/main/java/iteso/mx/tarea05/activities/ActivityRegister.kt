@@ -71,14 +71,16 @@ class ActivityRegister : AppCompatActivity(), View.OnClickListener {
                     if (error == null) {
                         //Sign up successful
                         Log.d("PARSE", "Sign up successful user: $strUser")
+                        startActivity<ActivityTutorial>()
                     } else {
                         //There was an error,
                         //networkState.postValue(NetworkState(Status.ERROR, error))
                         Log.e("DEBUG PARSE", "Failed to complete sign up process. Error message: ${error.message} Error code ${error.code}")
+                        Toast.makeText(this, error.message, Toast.LENGTH_LONG).show()
                     }
                 }
 
-                startActivity<ActivityTutorial>()
+
             }
         }
     }
