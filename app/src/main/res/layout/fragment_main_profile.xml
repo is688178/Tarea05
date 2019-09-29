@@ -35,13 +35,13 @@
         android:layout_marginStart="30dp"
         android:src="@drawable/sisters_of_mercy_by_nanfe_da6h71u"
         app:layout_constraintBottom_toTopOf="@id/fragment_profile_gh_h1"
-        app:layout_constraintEnd_toStartOf="@id/fragment_profile_tv_Testing"
+        app:layout_constraintEnd_toStartOf="@id/fragment_profile_tv_UserName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_chainStyle="spread_inside"
         android:layout_marginBottom="20dp"/>
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/fragment_profile_tv_Testing"
+        android:id="@+id/fragment_profile_tv_UserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -64,7 +64,7 @@
         android:textSize="15sp"
         app:layout_constraintBottom_toTopOf="@id/fragment_profile_gh_h0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/fragment_profile_tv_Testing" />
+        app:layout_constraintStart_toEndOf="@id/fragment_profile_tv_UserName" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/fragment_profile_tv_email"

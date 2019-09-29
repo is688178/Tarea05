@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import iteso.mx.tarea05.R
 import org.jetbrains.anko.find
 import com.parse.*
@@ -53,12 +54,10 @@ class ActivityRegister : AppCompatActivity(), View.OnClickListener {
                 val strEmail = mEmail.text.toString().trim()
                 val strPassword = mPassword.text.toString().trim()
 
-                // Register User in Parse
-//                val userObject = ParseObject("SimpleUser")
-//                userObject.put("user", strUser)
-//                userObject.put("email", strEmail)
-//                userObject.put("password", strPassword)
-//                userObject.saveInBackground()
+                if(strUser.isEmpty() || strPassword.isEmpty() || strEmail.isEmpty()){
+                    logInAlertDialog()
+                    return
+                }
 
                 val parseUser = ParseUser()
                 parseUser.apply {
@@ -76,12 +75,33 @@ class ActivityRegister : AppCompatActivity(), View.OnClickListener {
                         //There was an error,
                         //networkState.postValue(NetworkState(Status.ERROR, error))
                         Log.e("DEBUG PARSE", "Failed to complete sign up process. Error message: ${error.message} Error code ${error.code}")
-                        Toast.makeText(this, error.message, Toast.LENGTH_LONG).show()
+                        logInAlertDialog()
                     }
                 }
 
 
             }
         }
+    }
+
+    fun logInAlertDialog(){
+        val builder = AlertDialog.Builder(this)
+
+        // Set the alert dialog title
+        builder.setTitle("Error de Inicio de Sesión")
+
+        // Display a message on alert dialog
+        builder.setMessage("Favor de ingresar todos los campos.")
+
+        // Set a positive button and its click listener on alert dialog
+        builder.setPositiveButton("OK"){dialog, which ->
+            Toast.makeText(this,"Revisa y vuelve a presionar el boton....",Toast.LENGTH_SHORT).show()
+        }
+
+        // Finally, make the alert dialog using builder
+        val dialog: AlertDialog = builder.create()
+
+        // Display the alert dialog on app interface
+        dialog.show()
     }
 }
