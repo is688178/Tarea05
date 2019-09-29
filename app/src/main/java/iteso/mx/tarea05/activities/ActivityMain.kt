@@ -13,25 +13,6 @@ class ActivityMain : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /* TODO Add BottomNavigationView with three options
-        1.- List of recipes
-        Use FragmentRecipes
-        2.- Actual recipe
-        Create FragmentRecipe
-        Use MVP Pattern
-        FragmentRecipe (View)
-        Recipe (Model)
-        PresenterRecipe (Presenter)
-        Use ViewAnimator
-            FIRST_VIEW
-            Button with Refresh text
-            SECOND_VIEW
-            MaterialCard
-            THIRD_VIEW
-            Image with text
-        3.- Profile
-        Create FragmentProfile
-         */
         val navigation = findViewById<BottomNavigationView>(R.id.activity_main_bnv_navigation)
         navigation.setOnNavigationItemSelectedListener(this)
 

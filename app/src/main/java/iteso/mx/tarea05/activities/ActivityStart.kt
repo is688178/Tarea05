@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import com.parse.ParseInstallation
 import iteso.mx.tarea05.R
 import org.jetbrains.anko.find
 import org.jetbrains.anko.startActivity
@@ -22,6 +23,9 @@ class ActivityStart : AppCompatActivity(), View.OnClickListener {
 
         mLogin.setOnClickListener(this)
         mRegister.setOnClickListener(this)
+
+        // Save the current Installation to Back4App
+        ParseInstallation.getCurrentInstallation().saveInBackground()
     }
 
     override fun onClick(view: View?) {
